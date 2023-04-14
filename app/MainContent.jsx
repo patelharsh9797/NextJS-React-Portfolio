@@ -21,7 +21,7 @@ import web6 from "../public/web6.png";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillYoutube,
+  AiFillGithub,
 } from "react-icons/ai";
 
 const MainContent = () => {
@@ -47,6 +47,10 @@ const MainContent = () => {
         </div>
 
         <div className="text-5xl flex justify-center gap-16 text-slate-600 dark:text-slate-500">
+          <Link href={"https://github.com/patelharsh9797"} target="_blank">
+            <AiFillGithub className=" hover:text-teal-500  transition-all duration-300" />
+          </Link>
+
           <Link
             href={"https://www.linkedin.com/in/harsh-patel9797/"}
             target="_blank"

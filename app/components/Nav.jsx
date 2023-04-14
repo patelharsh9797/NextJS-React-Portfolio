@@ -13,14 +13,14 @@ const Nav = ({ currentTheme, setTheme }) => {
           <div>
             {currentTheme === "dark" ? (
               <div
-                className="p-2 rounded cursor-pointer bg-white hover:bg-opacity-95 text-yellow-400 text-xl"
+                className="py-2 px-3 rounded cursor-pointer bg-white hover:bg-opacity-95 text-yellow-400 text-xl"
                 onClick={() => setTheme("light")}
               >
                 <BsFillSunFill />
               </div>
             ) : (
               <div
-                className="p-2 rounded cursor-pointer bg-slate-900 hover:bg-opacity-95 text-teal-300 text-xl"
+                className="py-2 px-3 rounded cursor-pointer bg-slate-900 hover:bg-opacity-95 text-teal-300 text-xl"
                 onClick={() => setTheme("dark")}
               >
                 <BsFillMoonStarsFill />
