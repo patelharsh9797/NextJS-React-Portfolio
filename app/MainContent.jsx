@@ -18,6 +18,8 @@ import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 
+import GetData from "./data";
+
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -26,6 +28,8 @@ import {
 
 const MainContent = () => {
   const { theme, setTheme, systemTheme } = useTheme();
+
+  const data = GetData();
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -248,6 +252,12 @@ const MainContent = () => {
             />
           </div>
         </div>
+      </section>
+
+      <section>
+        {data.map((d) => (
+          <div key={d.id}>{d.name}</div>
+        ))}
       </section>
     </div>
   );
