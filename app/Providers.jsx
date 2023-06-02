@@ -18,14 +18,16 @@ const ThemeDiv = ({ children }) => {
   return (
     <>
       <header
-        className={`sticky top-0 z-30 px-10 md:px-20 ${
+        className={`sticky top-0 z-30 px-10 transition-all duration-500 md:px-20 ${
           resolvedTheme === "dark" ? "dark" : ""
         }`}
       >
         <Nav currentTheme={currentTheme} />
       </header>
       <main
-        className={`px-10 md:px-20 ${resolvedTheme === "dark" ? "dark" : ""}`}
+        className={`px-10 transition-all duration-500 md:px-20 ${
+          resolvedTheme === "dark" ? "dark" : ""
+        }`}
       >
         {children}
       </main>

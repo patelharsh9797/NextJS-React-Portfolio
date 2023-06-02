@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 
 const mainData = [
   {
-    id: nanoid(),
+    id: "123",
     projectTitle: "Emotter | T3 Stack",
     majorTools: "NextJS",
     toolsUsed:
@@ -24,7 +24,7 @@ const mainData = [
     ],
   },
   {
-    id: nanoid(),
+    id: "234",
     projectTitle: "Emotter | T3 Stack",
     majorTools: "NextJS",
     toolsUsed:
@@ -103,6 +103,12 @@ export const getAllPortFolioImg = () => {
   }));
 };
 
+export const getAllPortFolioIDStatic = () => {
+  return mainData.map((data) => ({
+    params: { id: data.id.toString() },
+  }));
+};
+
 export const getSinglePortfolio = (id) => {
-  return mainData.map((data) => data.id === id);
+  return mainData.find((data) => data.id.toString() === id);
 };

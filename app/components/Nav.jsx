@@ -10,8 +10,8 @@ const Nav = ({ currentTheme }) => {
   currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="mb-12 py-4 ">
-      <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-black bg-opacity-90 p-6 shadow-lg dark:bg-teal-500 dark:bg-opacity-90 md:flex-row md:justify-between">
+    <nav className="mb-12 py-4">
+      <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-black bg-opacity-90 p-6 shadow-lg transition-all duration-500 dark:bg-white dark:bg-opacity-90 md:flex-row md:justify-between">
         <h1 className="text-2xl font-medium text-teal-500 underline underline-offset-2 dark:text-black">
           Harsh Patel
         </h1>
@@ -20,17 +20,17 @@ const Nav = ({ currentTheme }) => {
             <div>
               {currentTheme === "dark" ? (
                 <div
-                  className="cursor-pointer rounded bg-white px-3 py-2 text-xl text-yellow-400 hover:bg-opacity-95"
+                  className="cursor-pointer rounded bg-slate-800 px-3 py-2 text-xl text-yellow-400 hover:bg-opacity-95"
                   onClick={() => setTheme("light")}
                 >
                   <BsFillSunFill />
                 </div>
               ) : (
                 <div
-                  className="cursor-pointer rounded bg-slate-900 px-3 py-2 text-xl text-teal-300 hover:bg-opacity-95"
+                  className="cursor-pointer rounded bg-white px-3 py-2 text-xl text-teal-300 hover:bg-opacity-95"
                   onClick={() => setTheme("dark")}
                 >
-                  <BsFillMoonStarsFill />
+                  <BsFillMoonStarsFill className="text-teal-700" />
                 </div>
               )}
             </div>
