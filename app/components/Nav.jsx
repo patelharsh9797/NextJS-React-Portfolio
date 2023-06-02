@@ -3,6 +3,7 @@
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const Nav = ({ currentTheme }) => {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -12,9 +13,12 @@ const Nav = ({ currentTheme }) => {
   return (
     <nav className="mb-12 py-4">
       <div className="flex flex-col items-center justify-center gap-4 rounded-lg bg-black bg-opacity-90 p-6 shadow-lg transition-all duration-500 dark:bg-white dark:bg-opacity-90 md:flex-row md:justify-between">
-        <h1 className="text-2xl font-medium text-teal-500 underline underline-offset-2 dark:text-black">
+        <Link
+          href={"/"}
+          className="text-2xl font-medium text-teal-500 underline underline-offset-2 dark:text-black"
+        >
           Harsh Patel
-        </h1>
+        </Link>
         <ul className="flex items-center gap-4">
           <li>
             <div>

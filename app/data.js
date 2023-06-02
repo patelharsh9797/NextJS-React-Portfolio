@@ -6,7 +6,7 @@ const mainData = [
     projectTitle: "Emotter | T3 Stack",
     majorTools: "NextJS",
     toolsUsed:
-      "NextJS 13,Tailwind,TypeScript ,tRPC , Prisma, Clerk, React-Hot-Toast",
+      "NextJS 13, Tailwind, TypeScript , tRPC, Prisma, Clerk, React-Hot-Toast",
     liveURL: "https://emotter-phi.vercel.app/",
     githubRepo: "https://github.com/patelharsh9797/chirp_t3_stack",
     mainImg: "/../public/emotter/emotter-t3-main.jpg",

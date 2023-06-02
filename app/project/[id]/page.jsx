@@ -23,8 +23,8 @@ export default function SingleProject({ params: { id } }) {
 
   return (
     <>
-      <div className={`space-y-8 pb-8 text-center`}>
-        <h2 className="text-2xl font-bold">{data.projectTitle}</h2>
+      <div className={`space-y-8 pb-8`}>
+        <h2 className="text-center text-2xl font-bold">{data.projectTitle}</h2>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           {data.projectImages.map((imageSrc, i) => (
@@ -41,6 +41,41 @@ export default function SingleProject({ params: { id } }) {
               />
             </div>
           ))}
+        </div>
+
+        <p>
+          <span className="font-bold">Main Technology Used : </span>
+          {data.majorTools}
+        </p>
+        <p>
+          <span className="font-bold">Overall Tools Used : </span>
+          {data.toolsUsed}
+        </p>
+        <p className="flex flex-col md:flex-row md:items-center md:gap-2">
+          <span>
+            <span className="mr-1">LinkIcon</span>
+            <span className="font-bold">Live URL :</span>
+          </span>
+          <Link href={data.liveURL} target="_blank" className="underline">
+            {data.liveURL}
+          </Link>
+        </p>
+        <p className="flex flex-col md:flex-row md:items-center md:gap-2">
+          <span>
+            <span className="mr-1">LinkIcon</span>
+            <span className="font-bold">Github Repo :</span>
+          </span>
+          <Link href={data.githubRepo} target="_blank" className="underline">
+            {data.githubRepo}
+          </Link>
+        </p>
+
+        <div className="flex flex-col gap-2">
+          <p className="font-bold">Project Details :</p>
+          {data.projectDescription.map((desc, index) => (
+            <p key={index}>{desc}</p>
+          ))}
+          projectDescription
         </div>
       </div>
     </>
