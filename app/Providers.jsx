@@ -2,12 +2,16 @@
 
 import { ThemeProvider, useTheme } from "next-themes";
 import Nav from "./components/Nav";
+import NextNProgress from "nextjs-progressbar";
 
 const Providers = ({ children }) => {
   return (
-    <ThemeProvider>
-      <ThemeDiv>{children}</ThemeDiv>
-    </ThemeProvider>
+    <>
+      <NextNProgress />
+      <ThemeProvider>
+        <ThemeDiv>{children}</ThemeDiv>
+      </ThemeProvider>
+    </>
   );
 };
 

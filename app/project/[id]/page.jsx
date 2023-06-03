@@ -4,11 +4,7 @@ import { getSinglePortfolio } from "@/app/data";
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillGithub,
-} from "react-icons/ai";
+import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 
 export function generateMetadata({ params: { id } }) {
   const data = getSinglePortfolio(id);
@@ -24,7 +20,9 @@ export default function SingleProject({ params: { id } }) {
   return (
     <>
       <div className={`space-y-8 pb-8`}>
-        <h2 className="text-center text-2xl font-bold">{data.projectTitle}</h2>
+        <h2 className="text-center text-2xl font-bold text-teal-300">
+          {data.projectTitle}
+        </h2>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
           {data.projectImages.map((imageSrc, i) => (
@@ -51,21 +49,33 @@ export default function SingleProject({ params: { id } }) {
           <span className="font-bold">Overall Tools Used : </span>
           {data.toolsUsed}
         </p>
-        <p className="flex flex-col md:flex-row md:items-center md:gap-2">
-          <span>
-            <span className="mr-1">LinkIcon</span>
+        <p className="flex flex-col md:flex-row md:items-center md:gap-4">
+          <span className="flex items-center">
+            <span className="mr-1 text-xl">
+              <AiOutlineLink />
+            </span>
             <span className="font-bold">Live URL :</span>
           </span>
-          <Link href={data.liveURL} target="_blank" className="underline">
+          <Link
+            href={data.liveURL}
+            target="_blank"
+            className="text-teal-300 underline hover:opacity-70"
+          >
             {data.liveURL}
           </Link>
         </p>
-        <p className="flex flex-col md:flex-row md:items-center md:gap-2">
-          <span>
-            <span className="mr-1">LinkIcon</span>
+        <p className="flex flex-col md:flex-row md:items-center md:gap-4">
+          <span className="flex items-center">
+            <span className="mr-1 text-xl">
+              <AiFillGithub />
+            </span>
             <span className="font-bold">Github Repo :</span>
           </span>
-          <Link href={data.githubRepo} target="_blank" className="underline">
+          <Link
+            href={data.githubRepo}
+            target="_blank"
+            className="text-teal-300 underline hover:opacity-70"
+          >
             {data.githubRepo}
           </Link>
         </p>
