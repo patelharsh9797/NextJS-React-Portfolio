@@ -19,7 +19,7 @@ const MainContent = () => {
   return (
     <div className={`space-y-12 pb-8`}>
       <section className="min-h-screen">
-        <div className="p-10 text-center">
+        {/* <div className="p-10 text-center">
           <h2 className="py-2 text-5xl font-medium text-teal-500 md:text-6xl">
             Harsh Patel
           </h2>
@@ -28,6 +28,19 @@ const MainContent = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             eaque eum id quidem vel alias quasi voluptatem, consectetur cumque
             aperiam.
+          </p>
+        </div> */}
+        <div className="p-10 text-center">
+          <h2 className="py-2 text-5xl font-medium text-teal-500 md:text-6xl">
+            Harsh Patel
+          </h2>
+          <h3 className="py-2 text-2xl md:text-3xl">Frontend Developer</h3>
+          <p className="text-md mx-auto max-w-xl py-5 leading-8 text-slate-600 dark:text-slate-500 md:text-xl">
+            Passionate about creating seamless user experiences and bringing
+            designs to life, I specialize in frontend development using
+            technologies like React and Next.js. With a strong focus on clean
+            code and attention to detail, I strive to deliver visually appealing
+            and intuitive web applications.
           </p>
         </div>
 
@@ -52,7 +65,7 @@ const MainContent = () => {
           </Link> */}
         </div>
 
-        <div className="relative mx-auto mt-20 h-80 w-80  overflow-hidden rounded-full bg-gradient-to-b from-teal-500 shadow-xl md:h-96 md:w-96">
+        <div className="relative mx-auto mt-20 h-52 w-52 overflow-hidden  rounded-full bg-gradient-to-b from-teal-500 shadow-xl md:h-96 md:w-96">
           <Image
             alt="image"
             src={myProfileImg}
@@ -159,7 +172,7 @@ const MainContent = () => {
           </p>
           <p className="text-md py-2 leading-8 text-slate-600 dark:text-slate-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex
-            illo laborum architecto animi natus{" "}
+            illo laborum architecto animi natus
             <span className="text-teal-500">officiis</span> psam fugit cumque
             excepturi.
           </p>
