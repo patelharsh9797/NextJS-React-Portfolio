@@ -26,6 +26,7 @@ const ThemeDiv = ({ children }) => {
       >
         <Nav currentTheme={currentTheme} />
       </header>
+
       <main
         className={`px-10 transition-all duration-500 md:px-20 ${
           resolvedTheme === "dark" ? "dark" : ""
