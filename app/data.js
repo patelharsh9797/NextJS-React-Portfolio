@@ -1,8 +1,9 @@
 import { nanoid } from "nanoid";
 
+// TODO static databse for porfolio
 const mainData = [
   {
-    id: "123",
+    id: "1accd961b2510074",
     projectTitle: "Emotter | T3 Stack",
     majorTools: "NextJS",
     toolsUsed:
@@ -24,7 +25,7 @@ const mainData = [
     ],
   },
   {
-    id: "234",
+    id: "a7ef19ce70b78b7f",
     projectTitle: "Twitter Clone | T3 Stack",
     majorTools: "NextJS",
     toolsUsed:
@@ -48,7 +49,7 @@ const mainData = [
     ],
   },
   {
-    id: "567",
+    id: "242df94aa5cd1bdf",
     projectTitle: "Simple Github Api Call | NextJS",
     majorTools: "NextJS",
     toolsUsed: "NextJS 13,Tailwind",
@@ -71,7 +72,7 @@ const mainData = [
     ],
   },
   {
-    id: "897",
+    id: "c0b4c06a6cb1e75f",
     projectTitle: "Movies Api App | NextJS",
     majorTools: "NextJS",
     toolsUsed: "NextJS 13,Tailwind",
@@ -86,68 +87,17 @@ const mainData = [
   },
 ];
 
-export const getAllPortFolioData = () => {
-  return [
-    {
-      id: nanoid(),
-      projectTitle: "Emotter | T3 Stack",
-      majorTools: "NextJS",
-      toolsUsed:
-        "NextJS 13,Tailwind,TypeScript ,tRPC , Prisma, Clerk, React-Hot-Toast",
-      liveURL: "https://emotter-phi.vercel.app/",
-      githubRepo: "https://github.com/patelharsh9797/chirp_t3_stack",
-      mainImg: "/emotter-t3-main.jpg",
-      projectImages: [
-        "/emotter1.jpg",
-        "/emotter2.jpg",
-        "/emotter3.jpg",
-        "/emotter4.jpg",
-        "/emotter5.jpg",
-        "/emotter6.jpg",
-      ],
-      projectDescription: [
-        "adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
-        "adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
-      ],
-    },
-    {
-      id: nanoid(),
-      projectTitle: "Emotter | T3 Stack",
-      majorTools: "NextJS",
-      toolsUsed:
-        "NextJS 13,Tailwind,TypeScript ,tRPC , Prisma, Clerk, React-Hot-Toast",
-      liveURL: "https://emotter-phi.vercel.app/",
-      githubRepo: "https://github.com/patelharsh9797/chirp_t3_stack",
-      mainImg: "/emotter2.jpg",
-      projectImages: [
-        "/emotter1.jpg",
-        "/emotter2.jpg",
-        "/emotter3.jpg",
-        "/emotter4.jpg",
-        "/emotter5.jpg",
-        "/emotter6.jpg",
-      ],
-      projectDescription: [
-        "adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
-        "adipiscing at in tellus integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
-      ],
-    },
-  ];
-};
-
-export const getAllPortFolioImg = () => {
-  return mainData.map((data) => ({
+// TODO all the api kind of functions
+export const getAllPortFolioImg = () =>
+  mainData.map((data) => ({
     id: data.id,
     mainImg: data.mainImg,
   }));
-};
 
-export const getAllPortFolioIDStatic = () => {
-  return mainData.map((data) => ({
+export const getAllPortFolioIDStatic = () =>
+  mainData.map((data) => ({
     params: { id: data.id.toString() },
   }));
-};
 
-export const getSinglePortfolio = (id) => {
-  return mainData.find((data) => data.id.toString() === id);
-};
+export const getSinglePortfolio = (id) =>
+  mainData.find((data) => data.id.toString() === id.toString());

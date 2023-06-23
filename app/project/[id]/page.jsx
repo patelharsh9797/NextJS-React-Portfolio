@@ -8,14 +8,23 @@ import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 
 export function generateMetadata({ params: { id } }) {
   const data = getSinglePortfolio(id);
+
   if (!data) return null;
+
   return { title: data.projectTitle };
 }
 
 export default function SingleProject({ params: { id } }) {
   const data = getSinglePortfolio(id);
 
-  if (!data) return <div>Error While Getting the Project Details</div>;
+  if (!data)
+    return (
+      <div className="flex justify-center">
+        <span className="rounded-lg bg-rose-500 px-8 py-2 text-xl font-bold text-black">
+          Error while Getting the Project Details
+        </span>
+      </div>
+    );
 
   return (
     <>

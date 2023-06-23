@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const Portfolio = () => {
   const allPortfolios = getAllPortFolioImg();
+
   if (!allPortfolios) return <div>No Data Found</div>;
 
   return (

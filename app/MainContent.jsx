@@ -18,7 +18,7 @@ import Portfolio from "./components/Portfolio";
 const MainContent = () => {
   return (
     <div className={`space-y-12 pb-8`}>
-      <section className="min-h-screen">
+      <section className="">
         {/* <div className="p-10 text-center">
           <h2 className="py-2 text-5xl font-medium text-teal-500 md:text-6xl">
             Harsh Patel
