@@ -50,7 +50,7 @@ const Nav = ({ currentTheme }) => {
           </li>
           <li>
             <a
-              className="rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-4 py-2 font-bold text-black hover:from-cyan-500 hover:to-teal-500"
+              className="rounded-md border-2 border-transparent bg-gradient-to-r from-teal-500 to-cyan-500 px-4 py-2 font-bold text-black hover:border-white hover:from-cyan-500 hover:to-teal-500 dark:hover:border-black"
               href="/resume.pdf"
               download
             >

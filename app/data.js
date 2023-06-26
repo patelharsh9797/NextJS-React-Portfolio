@@ -1,4 +1,8 @@
-import { nanoid } from "nanoid";
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillGithub,
+} from "react-icons/ai";
 
 // TODO static databse for porfolio
 const mainData = [
@@ -87,7 +91,34 @@ const mainData = [
   },
 ];
 
+const socialLinks = [
+  {
+    name: "github",
+    icon: (
+      <AiFillGithub className=" transition-all  duration-300 hover:text-teal-500" />
+    ),
+    link: "https://github.com/patelharsh9797",
+  },
+  {
+    name: "linkedin",
+    icon: (
+      <AiFillLinkedin className=" transition-all  duration-300 hover:text-teal-500" />
+    ),
+    link: "https://www.linkedin.com/in/harsh-patel9797/",
+  },
+  {
+    name: "twitter",
+    icon: (
+      <AiFillTwitterCircle className=" transition-all  duration-300 hover:text-teal-500" />
+    ),
+    link: "https://twitter.com/Patelharsh_9797",
+  },
+];
+
 // TODO all the api kind of functions
+
+export const getAllSocials = () => socialLinks;
+
 export const getAllPortFolioImg = () =>
   mainData.map((data) => ({
     id: data.id,
