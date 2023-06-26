@@ -5,13 +5,22 @@ import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+import { navVariants } from "../animation";
+
 const Nav = ({ currentTheme }) => {
   const { theme, setTheme, systemTheme } = useTheme();
 
   currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <nav className="mb-12 py-4">
+    <motion.nav
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="mb-12 py-4"
+    >
       <div className="glassmorphism flex flex-col items-center justify-center gap-4 rounded-lg bg-black bg-opacity-80 p-6 transition-all duration-500 dark:bg-white dark:bg-opacity-80 md:flex-row md:justify-between">
         <Link
           href={"/"}
@@ -50,7 +59,7 @@ const Nav = ({ currentTheme }) => {
           </li>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

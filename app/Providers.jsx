@@ -20,15 +20,16 @@ const ThemeDiv = ({ children }) => {
   return (
     <>
       <header
-        className={`sticky top-0 z-30  transition-all duration-500 ${
+        className={`sticky top-0  z-30 transition-all duration-500 ${
           resolvedTheme === "dark" ? "dark" : ""
         }`}
       >
+        <div className="gradient-01 absolute z-0 w-full py-4" />
         <Nav currentTheme={currentTheme} />
       </header>
 
       <main
-        className={`transition-all duration-500 ${
+        className={`space-y-12 pb-8 transition-all duration-500 ${
           resolvedTheme === "dark" ? "dark" : ""
         }`}
       >
