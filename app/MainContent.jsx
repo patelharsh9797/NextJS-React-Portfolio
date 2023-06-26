@@ -1,20 +1,18 @@
-import React from "react";
+// import Image from "next/image";
 
-import Image from "next/image";
+// import design from "../public/design.png";
+// import code from "../public/code.png";
+// import consulting from "../public/consulting.png";
 
-import design from "../public/design.png";
-import code from "../public/code.png";
-import consulting from "../public/consulting.png";
-
-import Portfolio from "./components/Portfolio";
 import Hero from "./components/Hero";
+import PortfolioSection from "./components/PortfolioSection";
 
 const MainContent = () => {
   return (
     <>
       <Hero />
-
-      <section className="">
+      <PortfolioSection />
+      {/* <section className="">
         <div>
           <h3 className="py-1 text-3xl font-medium dark:text-teal-400">
             Service I Offers
@@ -95,29 +93,7 @@ const MainContent = () => {
             <p className="py-1 text-slate-600 dark:text-slate-500">Figma</p>
           </div>
         </div>
-      </section>
-
-      <section className="">
-        <div>
-          <h3 className="py-1 text-3xl font-medium dark:text-teal-400">
-            Portfolio
-          </h3>
-          <p className="text-md py-2 leading-8 text-slate-600 dark:text-slate-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex
-            illo laborum architecto animi natus{" "}
-            <span className="text-teal-500">officiis</span> psam fugit cumque
-            excepturi.
-          </p>
-          <p className="text-md py-2 leading-8 text-slate-600 dark:text-slate-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ex
-            illo laborum architecto animi natus
-            <span className="text-teal-500">officiis</span> psam fugit cumque
-            excepturi.
-          </p>
-        </div>
-
-        <Portfolio />
-      </section>
+      </section> */}
     </>
   );
 };

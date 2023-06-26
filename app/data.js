@@ -116,13 +116,13 @@ const socialLinks = [
 ];
 
 // TODO all the api kind of functions
-
 export const getAllSocials = () => socialLinks;
 
 export const getAllPortFolioImg = () =>
   mainData.map((data) => ({
     id: data.id,
     mainImg: data.mainImg,
+    title: data.projectTitle,
   }));
 
 export const getAllPortFolioIDStatic = () =>
