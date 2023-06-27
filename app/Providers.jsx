@@ -20,7 +20,7 @@ const ThemeDiv = ({ children }) => {
   return (
     <>
       <header
-        className={`sticky top-0  z-30 transition-all duration-500 ${
+        className={`sticky top-0 z-30 transition-all duration-500 ${
           resolvedTheme === "dark" ? "dark" : ""
         }`}
       >
@@ -29,7 +29,7 @@ const ThemeDiv = ({ children }) => {
       </header>
 
       <main
-        className={`space-y-12 pb-8 transition-all duration-500 ${
+        className={`container mx-auto space-y-12 px-4 pb-8 transition-all duration-500 md:px-8 ${
           resolvedTheme === "dark" ? "dark" : ""
         }`}
       >

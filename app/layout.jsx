@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} container mx-auto px-4 md:px-8`}>
+      <body className={`${roboto.className}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

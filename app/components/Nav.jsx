@@ -19,9 +19,9 @@ const Nav = ({ currentTheme }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="mb-12 py-4"
+      className="mx-auto mb-12 sm:container sm:py-4"
     >
-      <div className="glassmorphism flex flex-col items-center justify-center gap-4 rounded-lg bg-black bg-opacity-80 p-6 transition-all duration-500 dark:bg-white dark:bg-opacity-80 md:flex-row md:justify-between">
+      <div className="glassmorphism flex flex-wrap items-center justify-between gap-4 bg-black bg-opacity-80 p-4 transition-all duration-500 dark:bg-white dark:bg-opacity-80 sm:rounded-lg md:p-6">
         <Link
           href={"/"}
           className="text-2xl font-medium text-teal-500 underline underline-offset-2 dark:text-black"
