@@ -21,7 +21,7 @@ const PortfolioCard = ({ data, index }) => {
           style={{ height: "100% !important" }}
           src={data.mainImg}
           alt={data.title}
-          className="h-full w-full object-cover group-hover:blur-sm"
+          className="object-cover group-hover:blur-sm"
           width={100}
           height={100}
           layout="responsive"
