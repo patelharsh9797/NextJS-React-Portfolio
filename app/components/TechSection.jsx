@@ -47,7 +47,7 @@ const TechSection = () => {
               alt={tech.name}
               width={100}
               height={100}
-              className={`flex-1 transition-all duration-300 ${
+              className={`flex-1 object-contain transition-all duration-300 ${
                 tech.isDark ? "dark:invert" : ""
               }`}
             />

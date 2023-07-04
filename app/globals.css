@@ -27,7 +27,7 @@
   /* box-shadow: 0 4px 6px 0 rgba(15, 118, 110, 0.25); */
 
   /* background: rgba(var(--card-rgb), 0); */
-  /* border: 1px solid rgba(var(--card-border-rgb), 0); */
+  border: 1px solid rgba(var(--card-border-rgb), 0);
   box-shadow: 0 4px 6px 0 rgba(15, 118, 110, 0.25);
 
   backdrop-filter: blur(4px);
@@ -37,7 +37,6 @@
 
 .cardGlass:hover {
   /* background: rgba(var(--card-rgb), .25); */
-  border-color: rgba(var(--card-border-rgb), .5);
   box-shadow: 0 4px 32px 0 rgba(15, 118, 110, 0.25);
 }
 
