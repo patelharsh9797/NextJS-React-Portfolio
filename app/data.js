@@ -4,6 +4,17 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 
+import HTML from "/public/techs/html.svg";
+import CSS from "/public/techs/css.svg";
+import JS from "/public/techs/javascript.svg";
+import REACTJS from "/public/techs/react.svg";
+import NEXTJS from "/public/techs/next.svg";
+import TS from "/public/techs/typescript.svg";
+import TAILWIND from "/public/techs/tailwind.svg";
+import PRISMA from "/public/techs/prisma.svg";
+import PYTHON from "/public/techs/python.svg";
+import SELENIUM from "/public/techs/selenium.svg";
+
 // TODO static databse for porfolio
 const mainData = [
   {
@@ -120,6 +131,69 @@ const mainData = [
   },
 ];
 
+const techsList = [
+  {
+    id: 1,
+    name: "Html",
+    path: HTML,
+    isDark: false,
+  },
+  {
+    id: 2,
+    name: "CSS",
+    path: CSS,
+    isDark: false,
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    path: JS,
+    isDark: false,
+  },
+  {
+    id: 4,
+    name: "React JS",
+    path: REACTJS,
+    isDark: false,
+  },
+  {
+    id: 5,
+    name: "Next JS",
+    path: NEXTJS,
+    isDark: true,
+  },
+  {
+    id: 6,
+    name: "TypeScript",
+    path: TS,
+    isDark: false,
+  },
+  {
+    id: 7,
+    name: "Tailwind CSS",
+    path: TAILWIND,
+    isDark: false,
+  },
+  {
+    id: 8,
+    name: "Prisma",
+    path: PRISMA,
+    isDark: true,
+  },
+  {
+    id: 9,
+    name: "Python",
+    path: PYTHON,
+    isDark: false,
+  },
+  {
+    id: 10,
+    name: "Selenium",
+    path: SELENIUM,
+    isDark: false,
+  },
+];
+
 const socialLinks = [
   {
     name: "github",
@@ -161,3 +235,5 @@ export const getAllPortFolioIDStatic = () =>
 
 export const getSinglePortfolio = (id) =>
   mainData.find((data) => data.id.toString() === id.toString());
+
+export const getTeachList = () => techsList;

@@ -2,19 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card-rgb: 180, 185, 188;
+  --card-dark-rgb: 0, 0, 0;
+  --card-border-rgb: 131, 134, 135;
+}
 
 .glassmorphism {
   /* background: rgba(255, 255, 255, 0.025); */
-  box-shadow: 0 8px 32px 0 rgba(15, 118, 110, 0.25);
+  box-shadow: 0 8px 6px 0 rgba(15, 118, 110, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   /* border: 4px solid rgba(255, 255, 255, 0.18); */
-  /* transition: all linear .5s; */
+  transition: all linear .3s;
 }
 
-/* .glassmorphism:hover {
-  background: rgba(255, 255, 255, 0.075);
-} */
+.glassmorphism:hover {
+  box-shadow: 0 8px 32px 0 rgba(15, 118, 110, 0.25);
+}
+
+
+.cardGlass {
+  /* background: rgba(255, 255, 255, 0.25); */
+  /* box-shadow: 0 4px 6px 0 rgba(15, 118, 110, 0.25); */
+
+  /* background: rgba(var(--card-rgb), 0); */
+  /* border: 1px solid rgba(var(--card-border-rgb), 0); */
+  box-shadow: 0 4px 6px 0 rgba(15, 118, 110, 0.25);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all linear .3s;
+}
+
+.cardGlass:hover {
+  /* background: rgba(var(--card-rgb), .25); */
+  border-color: rgba(var(--card-border-rgb), .5);
+  box-shadow: 0 4px 32px 0 rgba(15, 118, 110, 0.25);
+}
+
+.dark .cardGlass {
+  border: 1px solid rgba(var(--card-border-rgb), 0.25);
+}
+
+.dark .cardGlass:hover {
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+}
+
+
 
 .hero-gradient {
   background: linear-gradient(97.86deg,

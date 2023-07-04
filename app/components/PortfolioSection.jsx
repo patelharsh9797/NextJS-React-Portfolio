@@ -13,7 +13,7 @@ const PortfolioSection = () => {
       <motion.div
         variants={staggerContainer}
         viewport={{ once: true, amount: 0.25 }}
-        className="pb-4 text-center sm:px-32"
+        className="mb-8 pb-4 text-center sm:px-32"
       >
         <TitleText
           title={<>Portfolio</>}

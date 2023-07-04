@@ -10,7 +10,12 @@ import { fadeIn, zoomIn } from "../animation";
 const PortfolioCard = ({ data, index }) => {
   return (
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 1)}
+      variants={fadeIn(
+        "right",
+        "spring",
+        index < 1 ? (index + 0.5) * 0.5 : index * 0.75 * 0.5,
+        1
+      )}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}

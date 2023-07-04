@@ -65,7 +65,7 @@ const ProjectPage = ({ data }) => {
             autoPlay
             loop
             muted
-            className="mx-auto aspect-video w-full rounded-2xl border-2 border-opacity-50 shadow-lg md:w-3/4"
+            className="mx-auto aspect-video w-full rounded-2xl border-2 border-opacity-50 shadow-lg md:w-3/5"
           ></video>
         </motion.div>
       )}
