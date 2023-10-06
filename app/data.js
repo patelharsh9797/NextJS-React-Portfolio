@@ -229,9 +229,9 @@ export const getAllPortFolioImg = () =>
   }));
 
 export const getAllPortFolioIDStatic = () =>
-  mainData.map((data) => ({
-    params: { id: data.id.toString() },
-  }));
+  mainData.map((data) => (
+  { id: data.id.toString() }
+  ));
 
 export const getSinglePortfolio = (id) =>
   mainData.find((data) => data.id.toString() === id.toString());

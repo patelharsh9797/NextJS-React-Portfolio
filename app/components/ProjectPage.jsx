@@ -42,9 +42,9 @@ const ProjectPage = ({ data }) => {
             className="cursor-pointer overflow-hidden rounded-2xl shadow-lg"
           >
             <Image
-              src={imageSrc}
+              src={imageSrc ?? ""}
               alt="project images"
-              className="object-contain transition-all duration-500 hover:scale-105"
+              className="object-contain transition-all duration-500 hover:scale-105 h-auto"
               width={550}
               height={550}
             />
