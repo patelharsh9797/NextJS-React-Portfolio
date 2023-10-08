@@ -26,7 +26,7 @@ export default function SingleProject({ params: { id } }) {
     return (
       <div className="flex justify-center">
         <span className="rounded-lg bg-rose-500 px-8 py-2 text-xl font-bold text-black">
-          Error while Getting the Project Details
+          No Project Details Found!!!
         </span>
       </div>
     );
