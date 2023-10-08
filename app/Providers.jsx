@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider, useTheme } from "next-themes";
-import Nav from "./components/Nav";
+import Nav from "../components/Nav";
 
 const Providers = ({ children }) => {
   return (

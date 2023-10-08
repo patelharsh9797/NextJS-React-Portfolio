@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import { staggerContainer, textVariant, fadeIn, zoomIn } from "../animation";
+import { staggerContainer, textVariant, fadeIn, zoomIn } from "../app/animation";
 
 import Image from "next/image";
-import myProfileImg from "../../public/dev-ed-wave.png";
+import myProfileImg from "../public/dev-ed-wave.png";
 import { HeroHeadingTyping } from "./CustomTexts";
 
 import { getAllSocials } from "../data";

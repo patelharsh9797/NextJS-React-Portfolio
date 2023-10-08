@@ -1,6 +1,6 @@
 import React from "react";
-import { getSinglePortfolio,getAllPortFolioIDStatic } from "@/app/data.js";
-import ProjectPage from "@/app/components/ProjectPage.jsx";
+import { getSinglePortfolio,getAllPortFolioIDStatic } from "../../../data";
+import ProjectPage from "../../../components/ProjectPage";
 
 
 export async function generateStaticParams(){

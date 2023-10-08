@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
-import { fadeIn, zoomIn } from "../animation";
+import { fadeIn, zoomIn } from "../app/animation";
 
 const PortfolioCard = ({ data, index }) => {
   return (

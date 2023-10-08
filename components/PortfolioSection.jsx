@@ -4,7 +4,7 @@ import Portfolio from "./Portfolio";
 
 import { motion } from "framer-motion";
 
-import { staggerContainer, fadeIn, textVariant } from "../animation";
+import { staggerContainer, fadeIn, textVariant } from "../app/animation";
 import { TitleText } from "./CustomTexts";
 
 const PortfolioSection = () => {

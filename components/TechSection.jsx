@@ -4,7 +4,7 @@ import { getTeachList } from "../data";
 
 import { motion } from "framer-motion";
 
-import { staggerContainer, fadeIn } from "../animation";
+import { staggerContainer, fadeIn } from "../app/animation";
 import { TitleText } from "./CustomTexts";
 
 const TechSection = () => {

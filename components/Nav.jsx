@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import { navVariants } from "../animation";
+import { navVariants } from "../app/animation";
 
 const Nav = ({ currentTheme }) => {
   const { theme, setTheme, systemTheme } = useTheme();

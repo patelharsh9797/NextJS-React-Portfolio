@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AiOutlineLink, AiFillGithub } from "react-icons/ai";
 
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn, textVariant } from "../animation";
+import { staggerContainer, fadeIn, textVariant } from "../app/animation";
 
 const ProjectPage = ({ data }) => {
   return (
