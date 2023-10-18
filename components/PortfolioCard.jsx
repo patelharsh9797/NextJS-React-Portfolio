@@ -14,7 +14,7 @@ const PortfolioCard = ({ data, index }) => {
         "right",
         "spring",
         index < 1 ? (index + 0.5) * 0.5 : index * 0.75 * 0.5,
-        1
+        1,
       )}
       initial="hidden"
       whileInView="show"
@@ -26,7 +26,7 @@ const PortfolioCard = ({ data, index }) => {
           style={{ height: "100% !important" }}
           src={data.mainImg}
           alt={data.title}
-          className="object-cover group-hover:blur-sm"
+          className="bg-slate-500 bg-opacity-50 object-cover group-hover:blur-sm"
           width={100}
           height={100}
           layout="responsive"

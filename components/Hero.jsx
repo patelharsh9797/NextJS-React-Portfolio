@@ -3,7 +3,12 @@
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import { staggerContainer, textVariant, fadeIn, zoomIn } from "../app/animation";
+import {
+  staggerContainer,
+  textVariant,
+  fadeIn,
+  zoomIn,
+} from "../app/animation";
 
 import Image from "next/image";
 import myProfileImg from "../public/dev-ed-wave.png";
@@ -60,7 +65,9 @@ const Hero = () => {
             variants={fadeIn("right", "spring", (index + 1) * 0.5, 1)}
           >
             <Link href={social.link} key={`social-${index}`} target="_blank">
-              {social.icon}
+              <span className="transition-all duration-300 hover:text-teal-500">
+                {social.icon}
+              </span>
             </Link>
           </motion.div>
         ))}

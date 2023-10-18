@@ -197,23 +197,17 @@ const techsList = [
 const socialLinks = [
   {
     name: "github",
-    icon: (
-      <AiFillGithub className=" transition-all  duration-300 hover:text-teal-500" />
-    ),
+    icon: <AiFillGithub className="" />,
     link: "https://github.com/patelharsh9797",
   },
   {
     name: "linkedin",
-    icon: (
-      <AiFillLinkedin className=" transition-all  duration-300 hover:text-teal-500" />
-    ),
+    icon: <AiFillLinkedin className="" />,
     link: "https://www.linkedin.com/in/harsh-patel9797/",
   },
   {
     name: "twitter",
-    icon: (
-      <AiFillTwitterCircle className=" transition-all  duration-300 hover:text-teal-500" />
-    ),
+    icon: <AiFillTwitterCircle className="" />,
     link: "https://twitter.com/Patelharsh_9797",
   },
 ];
@@ -229,9 +223,7 @@ export const getAllPortFolioImg = () =>
   }));
 
 export const getAllPortFolioIDStatic = () =>
-  mainData.map((data) => (
-  { id: data.id.toString() }
-  ));
+  mainData.map((data) => ({ id: data.id.toString() }));
 
 export const getSinglePortfolio = (id) =>
   mainData.find((data) => data.id.toString() === id.toString());

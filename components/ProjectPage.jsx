@@ -25,7 +25,6 @@ const ProjectPage = ({ data }) => {
       >
         {data.projectTitle}
       </motion.h2>
-
       <div className="flex flex-wrap items-center justify-center gap-8">
         {data.projectImages.map((imageSrc, index) => (
           <motion.div
@@ -33,7 +32,7 @@ const ProjectPage = ({ data }) => {
               "right",
               "spring",
               index < 1 ? (index + 0.5) * 0.5 : index * 0.75 * 0.5,
-              1
+              1,
             )}
             initial="hidden"
             whileInView="show"
@@ -44,14 +43,13 @@ const ProjectPage = ({ data }) => {
             <Image
               src={imageSrc ?? ""}
               alt="project images"
-              className="object-contain transition-all duration-500 hover:scale-105 h-auto"
+              className="h-auto bg-slate-500 bg-opacity-50 object-contain transition-all duration-500 hover:scale-105"
               width={550}
               height={550}
             />
           </motion.div>
         ))}
       </div>
-
       {data.projectVideo && (
         <motion.div
           variants={fadeIn("up", "tween", 0, 1)}
@@ -65,11 +63,10 @@ const ProjectPage = ({ data }) => {
             autoPlay
             loop
             muted
-            className="mx-auto aspect-video w-full rounded-2xl border-2 border-opacity-50 shadow-lg md:w-3/5"
-          ></video>
+            className="mx-auto aspect-video w-full rounded-2xl  border-2 border-opacity-50 bg-slate-500 bg-opacity-50 shadow-lg md:w-3/5"
+          />
         </motion.div>
       )}
-
       <div className="space-y-8">
         <motion.p
           variants={textVariant(1.1)}
@@ -146,7 +143,6 @@ const ProjectPage = ({ data }) => {
           {data.projectDescription.map((desc, index) => (
             <p key={index}>{desc}</p>
           ))}
-          projectDescription
         </motion.div>
       </div>
     </motion.div>

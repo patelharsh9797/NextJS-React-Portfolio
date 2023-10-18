@@ -1,14 +1,13 @@
 import React from "react";
-import { getSinglePortfolio,getAllPortFolioIDStatic } from "../../../data";
+import { getSinglePortfolio, getAllPortFolioIDStatic } from "../../../data";
 import ProjectPage from "../../../components/ProjectPage";
 
+export async function generateStaticParams() {
+  const projects = getAllPortFolioIDStatic();
 
-export async function generateStaticParams(){
-  const projects = getAllPortFolioIDStatic()
-
-  return projects.map(project => ({
-    id:project.id
-  }))
+  return projects.map((project) => ({
+    id: project.id,
+  }));
 }
 
 export function generateMetadata({ params: { id } }) {
