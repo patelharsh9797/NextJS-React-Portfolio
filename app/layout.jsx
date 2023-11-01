@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           </header>
 
           <main
-            className={`container mx-auto space-y-12 px-4 pb-8 transition-all duration-500 md:px-8 `}
+            className={`max-w-4xl mx-auto w-full space-y-12 px-4 pb-8 transition-all duration-500 md:px-8 `}
           >
             {children}
           </main>
