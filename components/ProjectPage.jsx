@@ -21,11 +21,11 @@ const ProjectPage = ({ data }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="text-center text-2xl font-bold text-teal-600 dark:text-teal-400"
+        className="text-center text-3xl font-bold text-primary"
       >
         {data.projectTitle}
       </motion.h2>
-      <div className="flex flex-wrap items-center justify-center gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         {data.projectImages.map((imageSrc, index) => (
           <motion.div
             variants={fadeIn(
@@ -38,7 +38,7 @@ const ProjectPage = ({ data }) => {
             whileInView="show"
             viewport={{ once: true }}
             key={`project_image-${index}`}
-            className="cursor-pointer overflow-hidden rounded-2xl shadow-lg"
+            className="cardGlass2 cursor-pointer overflow-hidden rounded-2xl shadow-lg"
           >
             <Image
               src={imageSrc ?? ""}
@@ -46,10 +46,12 @@ const ProjectPage = ({ data }) => {
               className="h-auto bg-slate-500 bg-opacity-50 object-contain transition-all duration-500 hover:scale-105"
               width={550}
               height={550}
+              loading="eager"
             />
           </motion.div>
         ))}
       </div>
+
       {data.projectVideo && (
         <motion.div
           variants={fadeIn("up", "tween", 0, 1)}
@@ -63,7 +65,7 @@ const ProjectPage = ({ data }) => {
             autoPlay
             loop
             muted
-            className="mx-auto aspect-video w-full rounded-2xl  border-2 border-opacity-50 bg-slate-500 bg-opacity-50 shadow-lg md:w-3/5"
+            className="cardGlass2 mx-auto aspect-video w-full rounded-2xl border-opacity-50 bg-slate-500 bg-opacity-50 shadow-lg md:w-3/5"
           />
         </motion.div>
       )}
@@ -104,7 +106,7 @@ const ProjectPage = ({ data }) => {
           <Link
             href={data.liveURL}
             target="_blank"
-            className="break-words text-teal-600 underline  hover:opacity-70 dark:text-teal-400"
+            className="break-words text-primary underline  hover:opacity-70"
           >
             {data.liveURL}
           </Link>
@@ -126,7 +128,7 @@ const ProjectPage = ({ data }) => {
           <Link
             href={data.githubRepo}
             target="_blank"
-            className="break-words text-teal-600 underline hover:opacity-70 dark:text-teal-400"
+            className="break-words text-primary underline hover:opacity-70"
           >
             {data.githubRepo}
           </Link>

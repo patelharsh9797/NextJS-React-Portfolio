@@ -17,7 +17,7 @@ const Nav = () => {
       <div className="glassmorphism flex flex-wrap items-center justify-between gap-4 bg-black bg-opacity-80 p-4 transition-all duration-500 dark:bg-white dark:bg-opacity-80 sm:rounded-lg md:px-6">
         <Link
           href={"/"}
-          className="text-2xl font-medium text-teal-500 underline underline-offset-2 dark:text-black"
+          className="text-2xl font-medium text-primary underline underline-offset-2 dark:text-black"
         >
           Harsh Patel
         </Link>

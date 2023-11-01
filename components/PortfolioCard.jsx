@@ -19,7 +19,7 @@ const PortfolioCard = ({ data, index }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="overflow-hidden rounded-xl shadow-md"
+      className="cardGlass2 saturate-0 hover:saturate-100 overflow-hidden rounded-xl shadow-md transition-all duration-300"
     >
       <Link href={`/project/${data.id}`} className="group relative">
         <Image
@@ -36,7 +36,7 @@ const PortfolioCard = ({ data, index }) => {
             variants={zoomIn()}
             initial="hidden"
             whileInView="show"
-            className="rounded-md bg-teal-500 px-4 py-2 font-semibold text-black sm:text-xl"
+            className="rounded-md bg-primary px-4 py-2 font-semibold text-black sm:text-xl"
           >
             {data.title}
           </motion.span>

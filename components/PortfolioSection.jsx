@@ -17,7 +17,7 @@ const PortfolioSection = () => {
       >
         <TitleText
           title={<>Portfolio</>}
-          textStyles="text-3xl font-medium text-teal-600 dark:text-teal-400 text-center"
+          textStyles="text-3xl font-medium text-primary text-center"
           delay={0.5}
         />
         <motion.p
@@ -29,7 +29,7 @@ const PortfolioSection = () => {
         >
           Welcome to my portfolio! Here you will find a showcase of my latest
           projects and accomplishments. I am passionate about creating
-          innovative <span className="text-teal-500">solutions</span> and
+          innovative <span className="text-primary">solutions</span> and
           delivering exceptional results.
         </motion.p>
         <motion.p
