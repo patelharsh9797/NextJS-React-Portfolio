@@ -34,7 +34,7 @@ const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="py-2 text-2xl md:text-3xl"
+          className="py-2 text-secondary-foreground text-2xl md:text-3xl"
         >
           Frontend Developer
         </motion.h3>
@@ -43,7 +43,7 @@ const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-md mx-auto max-w-xl py-5 leading-8 text-slate-600 dark:text-slate-500 md:text-xl"
+          className="text-md mx-auto max-w-xl py-5 leading-8 text-muted-foreground dark:text-slate-500 md:text-xl"
         >
           Passionate about creating seamless user experiences and bringing
           designs to life, I specialize in frontend development using
@@ -58,14 +58,14 @@ const Hero = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="flex justify-center gap-16 text-5xl text-slate-600 dark:text-slate-500 "
+        className="flex justify-center gap-16 text-5xl text-accent-foreground"
       >
         {socials.map((social, index) => (
           <motion.div
             variants={fadeIn("right", "spring", (index + 1) * 0.5, 1)}
           >
             <Link href={social.link} key={`social-${index}`} target="_blank">
-              <span className="transition-all duration-300 hover:text-teal-500">
+              <span className="transition-all duration-300 opacity-50 saturate-0 hover:opacity-100 hover:text-primary hover:saturate-100">
                 {social.icon}
               </span>
             </Link>
@@ -86,6 +86,7 @@ const Hero = () => {
           layout="fill"
           objectFit="cover"
           className="transition-all duration-500 hover:scale-105"
+          loading="eager"
         />
       </motion.div>
     </section>

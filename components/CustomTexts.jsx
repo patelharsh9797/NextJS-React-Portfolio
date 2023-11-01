@@ -6,7 +6,7 @@ import { textContainer, textVariant2, textVariant } from "../app/animation";
 export const HeroHeadingTyping = ({ title, textStyles }) => (
   <motion.h2
     variants={textContainer}
-    className={`py-2 text-5xl font-medium text-teal-600 dark:text-teal-400 md:text-6xl ${textStyles}`}
+    className={`py-2 text-5xl font-bold text-primary md:text-6xl ${textStyles}`}
   >
     {Array.from(title).map((letter, index) => (
       <motion.span variants={textVariant2} key={index}>
