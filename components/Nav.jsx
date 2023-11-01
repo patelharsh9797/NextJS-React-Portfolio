@@ -1,17 +1,10 @@
 "use client";
-
-import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
-
-import { useTheme } from "next-themes";
 import Link from "next/link";
-
 import { motion } from "framer-motion";
 import { navVariants } from "../app/animation";
+import { ModeToggle } from "./ModeToggle";
 
-const Nav = ({ currentTheme }) => {
-  const { theme, setTheme, systemTheme } = useTheme();
-
-  currentTheme = theme === "system" ? systemTheme : theme;
+const Nav = () => {
 
   return (
     <motion.nav
@@ -30,23 +23,7 @@ const Nav = ({ currentTheme }) => {
         </Link>
         <ul className="flex items-center gap-4">
           <li>
-            <div>
-              {currentTheme === "dark" ? (
-                <div
-                  className="cursor-pointer rounded bg-slate-800 px-3 py-2 text-xl text-yellow-400 hover:bg-opacity-95"
-                  onClick={() => setTheme("light")}
-                >
-                  <BsFillSunFill />
-                </div>
-              ) : (
-                <div
-                  className="cursor-pointer rounded bg-white px-3 py-2 text-xl text-teal-300 hover:bg-opacity-95"
-                  onClick={() => setTheme("dark")}
-                >
-                  <BsFillMoonStarsFill className="text-teal-700" />
-                </div>
-              )}
-            </div>
+           <ModeToggle />
           </li>
           <li>
             <a
