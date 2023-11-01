@@ -38,7 +38,7 @@ const TechSection = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
             key={`tech-${tech.id}`}
-            className="cardGlass rounded-lg border bg-card text-card-foreground shadow-sm flex cursor-pointer flex-col items-center justify-center gap-8 p-4 group"
+            className="cardGlass rounded-lg border-opacity-10 border border-muted-foreground bg-card text-card-foreground shadow-sm flex cursor-pointer flex-col items-center justify-center gap-8 p-4 group"
           >
             <Image
               src={tech.path.src}
