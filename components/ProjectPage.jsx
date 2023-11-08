@@ -143,7 +143,7 @@ const ProjectPage = ({ data }) => {
         >
           <p className="font-bold">Project Details :</p>
           {data.projectDescription.map((desc, index) => (
-            <p key={index}>{desc}</p>
+            <p key={`description-${index}`}>{desc}</p>
           ))}
         </motion.div>
       </div>

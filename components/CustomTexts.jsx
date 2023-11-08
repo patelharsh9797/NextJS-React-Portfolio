@@ -9,7 +9,7 @@ export const HeroHeadingTyping = ({ title, textStyles }) => (
     className={`py-2 text-5xl font-bold text-primary md:text-6xl ${textStyles}`}
   >
     {Array.from(title).map((letter, index) => (
-      <motion.span variants={textVariant2} key={index}>
+      <motion.span variants={textVariant2} key={`herorHeadingLetter-${letter}-${index}`}>
         {letter === " " ? "\u00A0" : letter}
       </motion.span>
     ))}
@@ -22,7 +22,7 @@ export const TypingText = ({ title, textStyles }) => (
     className={`text-secondary-white text-[14px] font-semibold ${textStyles}`}
   >
     {Array.from(title).map((letter, index) => (
-      <motion.span variants={textVariant2} key={index}>
+      <motion.span variants={textVariant2} key={`typingTextLetter-${letter}-${index}`}>
         {letter === " " ? "\u00A0" : letter}
       </motion.span>
     ))}

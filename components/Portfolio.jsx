@@ -11,7 +11,7 @@ const Portfolio = () => {
   return (
     <div className="grid gap-12 py-2 md:grid-cols-2 ">
       {allPortfolios.map((data, index) => (
-        <PortfolioCard key={data.id} data={data} index={index} />
+        <PortfolioCard key={`portfolioCard-${data.id}`} data={data} index={index} />
       ))}
     </div>
   );

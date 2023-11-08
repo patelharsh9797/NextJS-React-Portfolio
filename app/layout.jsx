@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font'
 import "./globals.css";
 import Nav from "../components/Nav";
 import { ThemeProvider } from "./Providers"
+import {Progressbar} from "../components/Progressbar"
 
 export const metadata = {
   title: "Web Dev Hash | Portfolio",
@@ -11,8 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${GeistSans.className}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${GeistSans.className}`} >
+        <Progressbar  />
         <ThemeProvider attribute="class"
           defaultTheme="system"
           enableSystem

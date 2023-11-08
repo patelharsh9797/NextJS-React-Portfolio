@@ -63,6 +63,7 @@ const Hero = () => {
         {socials.map((social, index) => (
           <motion.div
             variants={fadeIn("right", "spring", (index + 1) * 0.5, 1)}
+            key={`socialIcon-${index}`}
           >
             <Link href={social.link} key={`social-${index}`} target="_blank">
               <span className="transition-all duration-300 opacity-50 saturate-0 hover:opacity-100 hover:text-primary hover:saturate-100">
